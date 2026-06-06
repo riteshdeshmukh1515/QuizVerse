@@ -1,213 +1,548 @@
-# QuizVerse 🎯
+# 🎯 QuizVerse - AI Powered Online Quiz Platform
 
-A modern, full-stack AI-powered online quiz platform built with **React + TypeScript + Vite + Tailwind CSS + Supabase + OpenRouter**.
+<div align="center">
 
-![QuizVerse Banner](public/images/hero-quiz.png)
 
-## ✨ Features
 
-### For Students
-- 📝 Browse and take quizzes across multiple categories
-- ⏱️ Timer-based quizzes with auto-submit
-- 📊 Real-time performance analytics with charts
-- 🏆 Global and quiz-specific leaderboards
-- 📜 PDF certificate generation for top scores
-- 🤖 AI-powered quiz generation with OpenRouter
-- 🌓 Dark/Light mode toggle
+**A Modern Full-Stack AI-Powered Online Quiz Platform**
 
-### For Admins
-- 📊 Admin dashboard with analytics
-- 📝 Create, edit, delete quizzes
-- 👥 User management
-- 📈 View all attempts and statistics
-- 🔐 Role-based access control
+Built with **React + TypeScript + Vite + Tailwind CSS + Supabase + OpenRouter AI**
 
-## 🛠️ Tech Stack
+🚀 Create • Attempt • Analyze • Compete • Learn
 
-- **Frontend:** React 18, TypeScript, Vite, Tailwind CSS
-- **State Management:** React Context API
-- **Charts:** Recharts
-- **Icons:** Lucide React
-- **Backend:** Supabase (Auth + Database)
-- **AI:** OpenRouter API (Meta Llama, GPT, etc.)
+</div>
 
-## 🚀 Quick Start
+---
 
-### 1. Clone the Repository
+## 📖 Overview
+
+QuizVerse is a feature-rich online quiz platform designed for students, educators, and organizations. It enables users to create, take, manage, and analyze quizzes while leveraging AI for automatic question generation.
+
+The platform includes advanced analytics, leaderboards, certificates, role-based access control, and AI-powered quiz creation.
+
+---
+
+## ✨ Key Features
+
+### 👨‍🎓 Student Features
+
+* 📝 Browse quizzes across multiple categories
+* ⏱️ Timer-based quiz system
+* 📊 Performance analytics dashboard
+* 📈 Progress tracking and score history
+* 🏆 Global and quiz-specific leaderboards
+* 📜 Downloadable PDF certificates
+* 🤖 AI-generated quizzes
+* 🎯 Multiple question formats
+* 🌙 Dark & Light Theme Support
+* 📱 Fully Responsive Design
+
+---
+
+### 👨‍💼 Admin Features
+
+* 📊 Admin Analytics Dashboard
+* 📝 Create, Edit & Delete Quizzes
+* 👥 Manage Users
+* 📈 View Attempts & Statistics
+* 🔐 Role-Based Access Control
+* 🚀 Publish/Unpublish Quizzes
+* 📋 Monitor Platform Activity
+
+---
+
+## 🎯 Quiz Types Supported
+
+### Multiple Choice Questions (MCQ)
+
+```text
+Which language is used for React?
+
+A. Python
+B. Java
+C. JavaScript ✅
+D. C++
+```
+
+### True / False
+
+```text
+React is a JavaScript Library.
+
+✅ True
+```
+
+### Fill in the Blank
+
+```text
+React was developed by ______.
+
+Answer: Facebook
+```
+
+---
+
+## 🤖 AI Powered Quiz Generation
+
+Generate complete quizzes instantly using OpenRouter AI.
+
+Features include:
+
+* Topic-based quiz generation
+* Difficulty selection
+* Custom question count
+* Automatic answer generation
+* Explanation generation
+* Instant quiz creation
+
+Example:
+
+```text
+Topic: React Hooks
+Difficulty: Medium
+Questions: 10
+```
+
+AI generates a complete quiz automatically.
+
+---
+
+# 🏗️ System Architecture
+
+```text
+ ┌─────────────────┐
+ │     React UI    │
+ └────────┬────────┘
+          │
+          ▼
+ ┌─────────────────┐
+ │ Context API     │
+ │ State Manager   │
+ └────────┬────────┘
+          │
+          ▼
+ ┌─────────────────┐
+ │ Supabase Auth   │
+ └────────┬────────┘
+          │
+          ▼
+ ┌─────────────────┐
+ │ Supabase DB     │
+ └────────┬────────┘
+          │
+          ▼
+ ┌─────────────────┐
+ │ OpenRouter AI   │
+ └─────────────────┘
+```
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+* React 18
+* TypeScript
+* Vite
+* Tailwind CSS
+* React Router DOM
+* Recharts
+* Lucide React
+
+## Backend
+
+* Supabase Authentication
+* Supabase PostgreSQL Database
+* Supabase Edge Functions
+
+## AI
+
+* OpenRouter API
+* Meta Llama Models
+* GPT Models
+* DeepSeek Models
+
+---
+
+# 📂 Project Structure
+
+```bash
+quizverse/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   ├── contexts/
+│   ├── pages/
+│   ├── hooks/
+│   ├── utils/
+│   ├── data/
+│   ├── lib/
+│   ├── types/
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── supabase/
+│   ├── migrations/
+│   └── functions/
+│
+├── .env.example
+├── package.json
+├── vite.config.ts
+└── README.md
+```
+
+---
+
+# 🚀 Quick Start
+
+## 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/yourusername/quizverse.git
+
 cd quizverse
 ```
 
-### 2. Install Dependencies
+---
+
+## 2️⃣ Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Setup Environment Variables
+---
 
-Create a `.env` file from the example:
+## 3️⃣ Environment Variables
+
+Create:
 
 ```bash
-cp .env.example .env
+.env
 ```
 
-Fill in your credentials:
+Add:
 
 ```env
-# Supabase (Required)
-VITE_SUPABASE_URL=https://your-project-ref.supabase.co
-VITE_SUPABASE_PUBLISHABLE_KEY=your-supabase-publishable-key
+# Supabase
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=your_key
 
-# OpenRouter (For AI features)
-VITE_OPENROUTER_API_KEY=sk-or-v1-your-openrouter-key
+# OpenRouter
+VITE_OPENROUTER_API_KEY=sk-or-v1-xxxxxxxx
 VITE_OPENROUTER_MODEL=meta-llama/llama-3.3-70b-instruct:free
 ```
 
-### 4. Setup Supabase Database
+---
 
-1. Go to [Supabase Dashboard](https://supabase.com/dashboard)
-2. Create a new project
-3. Open **SQL Editor**
-4. Run the migration file: `supabase/migrations/20260101000000_quizverse_schema.sql`
+## 4️⃣ Setup Supabase
 
-### 5. Setup OpenRouter (Optional - for AI quiz generation)
+### Create Project
 
-1. Go to [OpenRouter](https://openrouter.ai/) and create an API key
-2. Add it to your `.env` file
+1. Open Supabase Dashboard
+2. Create New Project
+3. Copy URL and Anon Key
 
-### 6. Run the App
+### Run Database Migration
+
+```sql
+supabase/migrations/20260101000000_quizverse_schema.sql
+```
+
+Paste and execute inside SQL Editor.
+
+---
+
+## 5️⃣ Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open:
 
-## 👥 Default Credentials
-
-When running **without Supabase** (local mode):
-
-- **Admin:** `admin@quizverse.com` / `admin123`
-- **Student:** `student@quizverse.com` / `student123`
-
-When running **with Supabase**:
-1. Register a new account
-2. Go to Supabase Table Editor → profiles
-3. Change your user's `role` from `student` to `admin`
-4. Logout and login again
-
-## 📁 Project Structure
-
-```
-quizverse/
-├── src/
-│   ├── components/       # Reusable UI components
-│   ├── contexts/         # Auth, Theme, Data contexts
-│   ├── pages/            # Page components
-│   ├── lib/              # Supabase & OpenRouter clients
-│   ├── data/             # Seed quizzes data
-│   ├── utils/            # Helper utilities
-│   ├── types.ts          # TypeScript types
-│   ├── App.tsx           # Main app with routing
-│   └── main.tsx          # Entry point
-├── supabase/
-│   ├── migrations/       # Database schema
-│   └── functions/        # Edge functions (AI)
-├── public/               # Static assets
-├── .env.example          # Environment template
-├── .gitignore            # Git ignore rules
-└── README.md             # This file
+```text
+http://localhost:5173
 ```
 
-## 🗄️ Database Schema
 
-### Tables
+---
+📸 Web Interface Screenshots
 
-- **profiles** - User profiles with roles (student/admin)
-- **quizzes** - Quiz metadata and questions (JSONB)
-- **quiz_attempts** - User quiz submissions
-- **leaderboards** - Ranking data
+🏠 Home / Landing Page
 
-### Features
+<img width="1601" height="877" alt="Screenshot 2026-06-06 114852" src="https://github.com/user-attachments/assets/18445b41-efca-4458-8d9b-9c8c3a705d70" />
 
-- ✅ Row Level Security (RLS) enabled
-- ✅ Automatic profile creation on signup
-- ✅ Admin role helper function
-- ✅ Indexes for performance
+🔐 Login Page
 
-## 🚀 Deployment
+<img width="1492" height="825" alt="Screenshot 2026-06-06 125303" src="https://github.com/user-attachments/assets/63075473-d1b3-4f71-8e8f-886611da9103" />
 
-### Deploy Frontend (Vercel/Netlify)
+📊 Student Dashboard
+<img width="1351" height="876" alt="Screenshot 2026-06-06 114222" src="https://github.com/user-attachments/assets/8579a456-b614-4d4e-962d-820a9642114b" />
 
-```bash
-npm run build
-```
+📚 Browse Quizzes Page
 
-Upload the `dist/` folder to your hosting platform.
+<img width="1721" height="880" alt="Screenshot 2026-06-06 114121" src="https://github.com/user-attachments/assets/02676531-0b22-48ba-bae1-a2ba32bb7c51" />
 
-**Important:** Set environment variables in your hosting dashboard:
-- `VITE_SUPABASE_URL`
-- `VITE_SUPABASE_PUBLISHABLE_KEY`
+🧠 Quiz Attempt Interface
 
-### Deploy Supabase Edge Function (Production)
+<img width="1427" height="877" alt="Screenshot 2026-06-06 114725" src="https://github.com/user-attachments/assets/ff3954df-b87c-4147-a3f8-7a7cfee9dae8" />
 
-```bash
-# Deploy the AI generation function
-supabase functions deploy generate-quiz
+🏆 Leaderboard Page
 
-# Set secrets (OpenRouter key should be secret, not in .env)
-supabase secrets set OPENROUTER_API_KEY=sk-or-v1-your-openrouter-key
-supabase secrets set OPENROUTER_MODEL=meta-llama/llama-3.3-70b-instruct:free
-```
+<img width="1411" height="868" alt="Screenshot 2026-06-06 114307" src="https://github.com/user-attachments/assets/9a10844c-8c8a-40a3-b96a-83e417473d18" />
 
-## 🎯 Environment Variables
+🛠️ Admin Dashboard
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `VITE_SUPABASE_URL` | Your Supabase project URL | ✅ Yes |
-| `VITE_SUPABASE_PUBLISHABLE_KEY` | Supabase publishable/anonymous key | ✅ Yes |
-| `VITE_OPENROUTER_API_KEY` | OpenRouter API key (for local dev) | ⚠️ Recommended |
-| `VITE_OPENROUTER_MODEL` | AI model to use | ❌ Optional |
-
-## 🛡️ Security Notes
-
-- ✅ `VITE_OPENROUTER_API_KEY` is exposed to browser (acceptable for local dev)
-- ✅ For production, use Supabase Edge Function secrets instead
-- ✅ RLS policies protect all database tables
-- ✅ Only admins can manage quizzes and view all data
-- ✅ Users can only see their own attempts
-
-## 🐛 Troubleshooting
-
-### Can't login after registering?
-- Check Supabase Auth settings: Disable "Confirm email" for development
-- Check browser console for errors
-- Verify your Supabase URL and key are correct
-
-### Admin dashboard not showing?
-- Update your role to `admin` in Supabase profiles table
-- Logout and login again
-
-### AI generation not working?
-- Check `VITE_OPENROUTER_API_KEY` is set
-- Try the Supabase Edge Function for production
-- Check browser console for API errors
-
-## 📝 License
-
-MIT License - feel free to use for personal or commercial projects!
-
-## 🙏 Credits
-
-- Built with ❤️ using React, TypeScript, and Tailwind CSS
-- Icons by [Lucide](https://lucide.dev/)
-- Charts by [Recharts](https://recharts.org/)
-- AI by [OpenRouter](https://openrouter.ai/)
-- Backend by [Supabase](https://supabase.com/)
+<img width="1578" height="875" alt="Screenshot 2026-06-06 114051" src="https://github.com/user-attachments/assets/524cc030-411d-4014-ae2a-9f60d973b7fc" />
 
 ---
 
-**Happy Quizzing! 🎓✨**
+
+# 📊 Dashboard Features
+
+### Student Dashboard
+
+* Total Quizzes Taken
+* Average Score
+* Best Score
+* Accuracy Percentage
+* Category Analytics
+* Recent Attempts
+* Progress Graphs
+
+### Admin Dashboard
+
+* Total Users
+* Total Quizzes
+* Total Attempts
+* Platform Performance
+* Activity Monitoring
+
+---
+
+# 🗄️ Database Schema
+
+## profiles
+
+```sql
+id
+name
+email
+role
+created_at
+```
+
+---
+
+## quizzes
+
+```sql
+id
+title
+description
+category
+difficulty
+duration
+questions
+created_by
+created_at
+```
+
+---
+
+## quiz_attempts
+
+```sql
+id
+user_id
+quiz_id
+score
+percentage
+submitted_at
+```
+
+---
+
+## leaderboards
+
+```sql
+id
+user_id
+quiz_id
+rank
+score
+```
+
+---
+
+# 🔐 Authentication & Security
+
+### Features
+
+* Secure Login
+* User Registration
+* Password Reset
+* Protected Routes
+* Role-Based Access Control
+* Supabase Authentication
+
+### Security Measures
+
+✅ Row Level Security (RLS)
+
+✅ Admin-only Operations
+
+✅ Secure API Access
+
+✅ Protected User Data
+
+✅ Authentication Guards
+
+---
+
+# 🏆 Leaderboard System
+
+Features:
+
+* Global Ranking
+* Quiz Ranking
+* Top Scorers
+* Dynamic Updates
+* Podium UI
+
+Ranking is based on:
+
+```text
+Highest Score
+Fastest Completion Time
+Attempt Count
+```
+
+---
+
+# 📜 Certificate Generation
+
+Certificates are generated automatically when:
+
+```text
+Score ≥ Passing Percentage
+```
+
+Includes:
+
+* Student Name
+* Quiz Name
+* Score
+* Date
+* Certificate ID
+
+Downloadable as PDF.
+
+---
+
+# 📈 Analytics Features
+
+### Student Analytics
+
+* Accuracy
+* Weak Areas
+* Strong Areas
+* Score Trend
+* Quiz History
+
+### Admin Analytics
+
+* User Growth
+* Popular Categories
+* Completion Rates
+* Average Scores
+* Engagement Metrics
+
+---
+
+# 🎨 UI/UX Features
+
+### Modern Interface
+
+* Gradient Design
+* Glassmorphism Effects
+* Interactive Cards
+* Smooth Animations
+
+### Theme Support
+
+* 🌞 Light Mode
+* 🌙 Dark Mode
+
+### Responsive Layout
+
+* Desktop
+* Tablet
+* Mobile
+
+---
+
+
+
+# 🔮 Future Enhancements
+
+* Live Quiz Battles
+* Multiplayer Mode
+* AI Tutor Integration
+* Video Explanations
+* Mobile App
+* Email Notifications
+* Discussion Forums
+* Gamification System
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+Steps:
+
+```bash
+Fork Repository
+
+Create Branch
+
+Commit Changes
+
+Push Branch
+
+Create Pull Request
+```
+
+---
+
+# 📄 License
+
+MIT License
+
+Free for personal and commercial use.
+
+---
+
+# 👨‍💻 Author
+
+Developed with ❤️ by **Ritesh Deshmukh**
+
+### Connect
+
+⭐ Star this repository if you found it useful.
+
+---
+
+<div align="center">
+
+## 🎓 Learn Better. Compete Smarter. Grow Faster.
+
+### 🚀 Welcome to QuizVerse
+
+</div>
